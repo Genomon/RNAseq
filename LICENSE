@@ -13,7 +13,7 @@ Redistribution and use in source and binary forms, with or without modification,
     nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
   ・We ask you to cite one of the following papers when you present your work in which genomon is used. New papers will be added to the list of papers in the 
     future. You can select one of the papers at the time you used Genomon.
-    ""
+    "Shiraishi et al., Genomon-fusion: a highly sensitive tool for RNA sequencing-based detection of gene fusions, in submission."
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
 LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 

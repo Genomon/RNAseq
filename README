@@ -1,9 +1,9 @@
  This is the Genomon RNAseq software package.
 
- Genomon RNAseq is a human exome analysis pipeline for DNA high-throughput sequencing data. Genomon is available only on the Human Genome Center (HGC) supercomputer system at The University of Tokyo.
+ Genomon RNAseq includes a number of modules for analyzing whole transcriptome sequencing data, such as alignments of, gene fusion detection (Genomon-fusion).
 
+ For an immediate and efficient use, parallelized version of Genomon RNAseq is installed on the Human Genome Center (HGC) supercomputer system at The University of Tokyo.
  Copyright(2012) Laboratory of DNA Information Analysis, Human Genome Center, Institute of Medical Science, The University of Tokyo retains certain rights in this software.
 
  License:
  This software is distributed under the Genomon-RNAseq License.
- 
