@@ -88,8 +88,6 @@ readonly JOB_CUT1=my_cutadapt.${TAG}.1
 readonly JOB_CUT2=my_cutadapt.${TAG}.2
 readonly JOB_SPLIT1=split.${TAG}.1
 readonly JOB_SPLIT2=split.${TAG}.2
-readonly JOB_BOWTIE1=run_bowtie.${TAG}.1
-readonly JOB_BOWTIE2=run_bowtie.${TAG}.2
 
 
 # preprocess step
@@ -133,10 +131,10 @@ if [ ${flg_cut_adoupt} = "TRUE" ]; then
   inputFastq2=${OUTPUTDATADIR}/adaptor/sequence2.txt
 fi
 
-echo "qsub -v RNA_ENV=${RNA_ENV} -N ${JOB_SPLIT1} -hold_jid ${JOB_CUT1} ${LOGSTR} ${COMMAND_MAPPING}/split.sh ${SPLITFACTOR} 3 ${inputFastq1} ${OUTPUTDATADIR}/split/sequence1.txt."
-qsub -v RNA_ENV=${RNA_ENV} -N ${JOB_SPLIT1} -hold_jid ${JOB_CUT1} ${LOGSTR} ${COMMAND_MAPPING}/split.sh ${SPLITFACTOR} 3 ${inputFastq1} ${OUTPUTDATADIR}/split/sequence1.txt.
+echo "qsub -v RNA_ENV=${RNA_ENV} -N ${JOB_SPLIT1} -hold_jid ${JOB_MAQ1},${JOB_CUT1} ${LOGSTR} ${COMMAND_MAPPING}/split.sh ${SPLITFACTOR} 3 ${inputFastq1} ${OUTPUTDATADIR}/split/sequence1.txt."
+qsub -v RNA_ENV=${RNA_ENV} -N ${JOB_SPLIT1} -hold_jid ${JOB_MAQ1},${JOB_CUT1} ${LOGSTR} ${COMMAND_MAPPING}/split.sh ${SPLITFACTOR} 3 ${inputFastq1} ${OUTPUTDATADIR}/split/sequence1.txt.
 
-echo "qsub -v RNA_ENV=${RNA_ENV} -N ${JOB_SPLIT2} -hold_jid ${JOB_CUT2} ${LOGSTR} ${COMMAND_MAPPING}/split.sh ${SPLITFACTOR} 3 ${inputFastq2} ${OUTPUTDATADIR}/split/sequence2.txt."
-qsub -v RNA_ENV=${RNA_ENV} -N ${JOB_SPLIT2} -hold_jid ${JOB_CUT2} ${LOGSTR} ${COMMAND_MAPPING}/split.sh ${SPLITFACTOR} 3 ${inputFastq2} ${OUTPUTDATADIR}/split/sequence2.txt.
+echo "qsub -v RNA_ENV=${RNA_ENV} -N ${JOB_SPLIT2} -hold_jid ${JOB_MAQ2},${JOB_CUT2} ${LOGSTR} ${COMMAND_MAPPING}/split.sh ${SPLITFACTOR} 3 ${inputFastq2} ${OUTPUTDATADIR}/split/sequence2.txt."
+qsub -v RNA_ENV=${RNA_ENV} -N ${JOB_SPLIT2} -hold_jid ${JOB_MAQ2},${JOB_CUT2} ${LOGSTR} ${COMMAND_MAPPING}/split.sh ${SPLITFACTOR} 3 ${inputFastq2} ${OUTPUTDATADIR}/split/sequence2.txt.
 
 
